@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @nugget.title
+%p
+  %strong Content:
+  = @nugget.content
+= link_to 'Edit', edit_nugget_path(@nugget)
+|
+= link_to 'Back', nuggets_path
