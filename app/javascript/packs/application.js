@@ -15,3 +15,14 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// boootstrap
+require("bootstrap")
+require("../stylesheets/application")
+
+document.addEventListener("turbolinks:load", function () {
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+  })
+})
