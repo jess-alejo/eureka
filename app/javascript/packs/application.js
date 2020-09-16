@@ -17,12 +17,18 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 // boootstrap
-require("bootstrap")
+require("material-dashboard-dark-edition/assets/js/core/bootstrap-material-design.min.js")
+require("material-dashboard-dark-edition/assets/js/plugins/perfect-scrollbar.jquery.min.js")
+require("material-dashboard-dark-edition/assets/js/plugins/chartist.min.js")
+require("material-dashboard-dark-edition/assets/js/plugins/bootstrap-notify.js")
+require("material-dashboard-dark-edition/assets/js/material-dashboard.js?v=2.1.0")
+
 require("../stylesheets/application")
 
 document.addEventListener("turbolinks:load", function () {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
+    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
   })
 })

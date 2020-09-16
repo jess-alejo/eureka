@@ -1,0 +1,12 @@
+.container-fluid
+  %nav.float-left
+    %ul
+      %li
+        = link_to 'View on Github', 'https://github.com/jess-alejo/eureka', target: '_blank'
+  .copyright.float-right
+    ©
+    = "#{DateTime.now.utc.year}, made with"
+    %i.material-icons favorite
+    by
+    = link_to 'saguiguilid', 'https://jea.com.ph', target: '_blank'
+  / your footer here

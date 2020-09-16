@@ -1,0 +1,17 @@
+%nav.navbar.navbar-expand-lg.navbar-transparent.navbar-absolute.fixed-top
+  .container-fluid
+    .navbar-wrapper
+      %a.navbar-brand{:href => "javascript:void(0)"} Dashboard
+    %button.navbar-toggler{"aria-controls" => "navigation-index", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-toggle" => "collapse", :type => "button"}
+      %span.sr-only Toggle navigation
+      %span.navbar-toggler-icon.icon-bar
+      %span.navbar-toggler-icon.icon-bar
+      %span.navbar-toggler-icon.icon-bar
+    .collapse.navbar-collapse.justify-content-end
+      %ul.navbar-nav
+        %li.nav-item
+          %a.nav-link{:href => "javascript:void(0)"}
+            %i.material-icons notifications
+            %p.d-lg-none.d-md-block
+              Notifications
+        / your navbar here

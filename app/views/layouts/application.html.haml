@@ -3,11 +3,26 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta{:content => "Compilation of scripts, snippets, tutorials for beginner developers", :name => "description"}/
+
+    / Fonts and icons
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css", :rel => "stylesheet"}/
+
     %title Eureka | JEA
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    = yield
+  %body.dark-edition
+    .wrapper
+      = render 'shared/sidebar'
+      .main-panel
+        = render 'shared/navbar'
+        .content
+          .container-fluid
+            = yield
+        %footer.footer
+          = render 'shared/footer'
