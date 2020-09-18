@@ -7,8 +7,11 @@
     = link_to 'Eureka | JEA', root_path, class: 'simple-text log-normal'
   .sidebar-wrapper
     %ul.nav
-      %li.nav-item.active
-        %a.nav-link{:href => "javascript:void(0)"}
+      %li.nav-item{ class: active_link("home") }
+        = link_to root_path, class: 'nav-link' do
           %i.material-icons dashboard
           %p Dashboard
-      / your sidebar here
+      %li.nav-item{ class: active_link("nuggets") }
+        = link_to nuggets_path, class: 'nav-link' do
+          %i.material-icons smart_button
+          %p Nuggets
